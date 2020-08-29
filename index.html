@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>Weather</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Weather App using Search" />
+		<meta name="author" content="Rucha Butala" />
+
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+
+	<body class="container-fluid" id="WeatherApp">
+		<div id="searchBox" class="row form-group">
+			<div class="col-md-2">
+				<input
+					type="text"
+					class="form-control"
+					id="searchBar"
+					placeholder="Enter City Name or Zip-code"
+				/>
+			</div>
+			<div class="col-auto">
+				<button type="submit" id="searchBtn" class="btn btn-default">
+					SEARCH
+				</button>
+			</div>
+		</div>
+
+		<div id="weatherBox well well-lg">
+			<h3 id="cityName"></h3>
+			<small><span id="countryCode"></span></small><br />
+			<span><img id="imageIcon" /></span>
+			<br />
+			<span id="temperature"></span> <br />
+			<span id="temperatureMain"></span> <br />
+			<span id="temperatureDescription"></span>
+			<hr />
+			<span id="feels_like"></span> <br />
+			<span id="humidity"></span> <br />
+			<span id="pressure"></span>
+			<hr />
+			<span id="windSpeed"></span> <br />
+			<span id="clouds"></span> <br />
+		</div>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>

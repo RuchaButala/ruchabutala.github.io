@@ -1,0 +1,18 @@
+#WeatherApp {
+	background-image: URL("../img/default.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	color: whitesmoke;
+	text-shadow: 2px 3px 3px 2px black;
+}
+
+#weatherBox {
+	background-color: grey;
+	opacity: 0.5;
+	border: 2px;
+	box-shadow: 3px grey;
+	height: 500;
+	width: 200;
+}
