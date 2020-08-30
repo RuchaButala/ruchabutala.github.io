@@ -5,7 +5,7 @@ var searchMethod = "q";
 
 function getResultFromServer(searchTerm) {
 	fetch(
-		"http://api.openweathermap.org/data/2.5/weather?" +
+		"https://api.openweathermap.org/data/2.5/weather?" +
 		searchMethod +
 		"=" +
 		searchTerm +
@@ -93,7 +93,7 @@ function init(resultFromServer) {
 	document.getElementById("cityName").innerHTML = resultFromServer.name;
 
 	document.getElementById("imageIcon").src =
-		"http://openweathermap.org/img/wn/" +
+		"https://openweathermap.org/img/wn/" +
 		resultFromServer.weather[0].icon +
 		"@2x.png";
 
