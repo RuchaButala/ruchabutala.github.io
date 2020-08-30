@@ -32,6 +32,35 @@ function init(resultFromServer) {
 				'url("../img/clear.jpg")';
 			break;
 
+		case "Mist":
+		case "Fog":
+			document.getElementById("WeatherApp").style.backgroundImage =
+				'url("../img/mist.jpg")';
+			break;
+
+		case "Haze":
+			document.getElementById("WeatherApp").style.backgroundImage =
+				'url("../img/haze.jpg")';
+			break;
+
+		case "Dust":
+		case "Sand":
+			document.getElementById("WeatherApp").style.backgroundImage =
+				'url("../img/dust.jpg")';
+			break;
+
+		case "Tornado":
+		case "Squall":
+			document.getElementById("WeatherApp").style.backgroundImage =
+				'url("../img/tornado.jpg")';
+			break;
+
+		case "Smoke":
+		case "Ash":
+			document.getElementById("WeatherApp").style.backgroundImage =
+				'url("../img/smoke.jpg")';
+			break;
+
 		case "Clouds":
 			document.getElementById("WeatherApp").style.backgroundImage =
 				'url("../img/cloudy.jpg")';
