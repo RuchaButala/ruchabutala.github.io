@@ -3,6 +3,57 @@ var keyId = "74becdaf6150ed35117a73bef007d875";
 var unit = "metric";
 var searchMethod = "q";
 
+var languages = {
+	Afrikaans: "af",
+	Albanian: "al",
+	Arabic: "ar",
+	Azerbaijani: "az",
+	Bulgarian: "bg",
+	Catalan: "ca",
+	Czech: "cz",
+	Danish: "da",
+	German: "de",
+	Greek: "el",
+	English: "en",
+	Basque: "eu",
+	Persian: "fa",
+	Finnish: "fi",
+	French: "fr",
+	Galician: "gl",
+	Hebrew: "he",
+	Hindi: "hi",
+	Croatian: "hr",
+	Hungarian: "hu",
+	Indonesian: "id",
+	Italian: "it",
+	Japanese: "ja",
+	Korean: "kr",
+	Latvian: "la",
+	Lithuanian: "lt",
+	Macedonian: "mk",
+	Norwegian: "no",
+	Dutch: "nl",
+	Polish: "pl",
+	Portuguese: "pt",
+	Português_Brasil: "pt_br",
+	Romanian: "ro",
+	Russian: "ru",
+	Swedish: "se",
+	Slovak: "sk",
+	Slovenian: "sl",
+	Spanish: "sp",
+	Serbian: "sr",
+	Thai: "th",
+	Turkish: "tr",
+	Ukrainian: "uk",
+	Vietnamese: "vi",
+	Chinese_Simplified: "zh_cn",
+	Chinese_Traditional: "zh_tw",
+	Zulu: "zu"
+}
+
+var langName = document.getElementById("languageName");
+
 function getResultFromServer(searchTerm) {
 	fetch(
 		"https://api.openweathermap.org/data/2.5/weather?" +
@@ -10,7 +61,9 @@ function getResultFromServer(searchTerm) {
 		"=" +
 		searchTerm +
 		"&APPID=74becdaf6150ed35117a73bef007d875&units=" +
-		unit
+		unit +
+		"&lang=" +
+		languages[langName.value]
 	)
 		.then((result) => {
 			return result.json();
@@ -22,7 +75,7 @@ function getResultFromServer(searchTerm) {
 
 function init(resultFromServer) {
 	let box = document.getElementById("weatherBox");
-
+	//console.log(languages[langName.value]);
 
 	let main = resultFromServer.weather[0].main;
 
@@ -126,7 +179,7 @@ function init(resultFromServer) {
 	let height = box.clientHeight;
 	let width = box.clientWidth;
 	box.style.left = 'calc(50% - ' + width / 2 + 'px)';
-	box.style.top = 'calc(50% - ' + height / 1.3 + ')px';
+	box.style.top = 'calc(50% - ' + height / 2 + 'px)';
 
 
 	//box.style.visibility = "visible";

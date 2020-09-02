@@ -20,6 +20,21 @@
 	visibility: hidden;
 }
 
+#language {
+	color: black;
+	margin-top : 0;
+	float : right;
+	padding : 20px;
+}
+
+#languageName {
+	right:0;top:0;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 1px 1px 3px black;
+	padding : 5px;
+}
+
 h3 {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-size: 40px;
@@ -35,6 +50,8 @@ span {
 #searchBox {
 	padding: 20px;
 	color: black;
+	width : 500px;
+	float : left;
 }
 
 #searchBar,
