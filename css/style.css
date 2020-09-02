@@ -3,6 +3,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
+	transition: background 1s linear;
 
 	align-items: center;
 

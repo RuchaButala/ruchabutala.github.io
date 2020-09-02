@@ -129,7 +129,8 @@ function init(resultFromServer) {
 	box.style.top = 'calc(50% - ' + height / 1.3 + ')px';
 
 
-	box.style.visibility = "visible";
+	//box.style.visibility = "visible";
+	$('#weatherBox').css({ opacity: 0, visibility: "visible" }).animate({ opacity: 1 }, 'slow');
 	// console.log(cityName, countryCode, temperature, temperatureMain, description);
 	// console.log(feelsLike, humidity, pressure);
 	// console.log(windSpeed, clouds);
